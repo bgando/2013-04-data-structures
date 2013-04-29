@@ -22,8 +22,19 @@ describe("stack", function() {
   // Organize your tests with nested describe() statements
   // Use '#methodName()' to denote tests that focus on a certain method
   describe('#add()', function() {
-
+    it('should add to stack', function() {
+      stack.add(4);
+      stack.add(5);
+      stack.add(6);
+      expect(stack.toEqual({
+        0:4,
+        1:5,
+        2:6
+        })
+      );
+    });
   });
+
 
   // Hey! Add more tests here to test the functionality of stack
 });
