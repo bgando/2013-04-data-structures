@@ -43,6 +43,13 @@ describe("stack", function() {
       expect(stack.remove()).to.equal(6);
       expect(stack.size()).to.equal(2);
     });
+
+    it('should throw error if stack is empty already', function() {
+      stack.remove();
+      stack.remove();
+      stack.remove();
+      expect(stack.remove).to.Throw(Error);
+    });
   });
 
   // Hey! Add more tests here to test the functionality of stack
