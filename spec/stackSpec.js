@@ -10,9 +10,9 @@ describe("stack", function() {
     } else if (runner.is('src/pseudoclassical')) {
       stack = new Stack();
     }
-      stack.add(4);
-      stack.add(5);
-      stack.add(6);
+    stack.add(4);
+    stack.add(5);
+    stack.add(6);
   });
 
   // Any stack implementation should have the following methods
