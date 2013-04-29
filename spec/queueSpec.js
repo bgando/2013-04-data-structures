@@ -49,5 +49,30 @@ describe("queue", function() {
       expect(queue.remove).to.Throw(Error);
     });
   });
+
+/*
+  describe('profiling', function(){
+    it('is going to profile now', function () {
+      var queues = [];
+      for (var i=0; i<5000; i++) {
+        var queue;
+        if (runner.is('src/functional') || runner.is('src/functional-shared')) {
+          queue = makeQueue();
+        } else if (runner.is('src/prototypal')) {
+          queue = Queue();
+        } else if (runner.is('src/pseudoclassical')) {
+          queue = new Queue();
+        }
+        for (var j=0; j<5000; j++) {
+          queue.add(j);
+          queue.add('hi');
+          queue.remove();
+        }
+        queues.push(queue);
+      }
+    });
+  });
+*/
   // Hey! Add more tests here to test the functionality of queue
 });
+

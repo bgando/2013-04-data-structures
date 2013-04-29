@@ -1,3 +1,5 @@
+//16291ms
+
 var makeStack = function(){
   // Use an object with numeric keys to store values
   // Implement the methods below

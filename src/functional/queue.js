@@ -1,3 +1,4 @@
+//profiled: 4451ms
 var makeQueue = function(){
   // Use an object with numeric keys to store values
   var storage = {};

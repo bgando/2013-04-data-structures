@@ -1,3 +1,4 @@
+//profiled: 21364ms (profile3)
 var makeStack = function(){
   // Use an object with numeric keys to store values
   var storage = {};

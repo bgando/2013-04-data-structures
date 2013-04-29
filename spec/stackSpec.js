@@ -52,5 +52,27 @@ describe("stack", function() {
     });
   });
 
+  // describe('profiling', function(){
+  //   it('is going to profile now', function () {
+  //     var stacks = [];
+  //     for (var i=0; i<10000; i++) {
+  //       var stack;
+  //       if (runner.is('src/functional') || runner.is('src/functional-shared')) {
+  //         stack = makeStack();
+  //       } else if (runner.is('src/prototypal')) {
+  //         stack = Stack();
+  //       } else if (runner.is('src/pseudoclassical')) {
+  //         stack = new Stack();
+  //       }
+  //       for (var j=0; j<10000; j++) {
+  //         stack.add(j);
+  //         stack.add('hi');
+  //         stack.remove();
+  //       }
+  //       stacks.push(stack);
+  //     }
+  //   });
+  // });
+
   // Hey! Add more tests here to test the functionality of stack
 });
