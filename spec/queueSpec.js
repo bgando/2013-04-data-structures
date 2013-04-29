@@ -10,6 +10,8 @@ describe("queue", function() {
     } else if (runner.is('src/pseudoclassical')) {
       queue = new Queue();
     }
+    queue.add('foo');
+    queue.add('bar');
 
   });
 
@@ -23,8 +25,29 @@ describe("queue", function() {
   // Organize your tests with nested describe() statements
   // Use '#methodName()' to denote tests that focus on a certain method
   describe('#add()', function() {
-    
+    it('should increase size when it\'s added', function(){
+      queue.add(0);
+      expect(queue.size()).to.equal(3);
+      queue.add(1);
+      expect(queue.size()).to.equal(4);
+    });
   });
-
+  describe('#size()', function() {
+    it('should increase size', function() {
+      expect(queue.size()).to.equal(2);
+    });
+  });
+  describe('#remove()', function() {
+    it('should remove front of queue', function() {
+      expect(queue.remove()).to.equal('foo');
+      expect(queue.size()).to.equal(1);
+      expect(queue.remove()).to.equal('bar');
+    });
+    it('should throw error if queue is empty', function() {
+      queue.remove();
+      queue.remove();
+      expect(queue.remove).to.Throw(Error);
+    });
+  });
   // Hey! Add more tests here to test the functionality of queue
 });
