@@ -8,7 +8,8 @@ var makeStack = function(){
   var stack = {};
 
   stack.add = function(value){
-
+    stack[size] = value;
+    size+=1;
 
   };
 
@@ -16,6 +17,7 @@ var makeStack = function(){
   };
 
   stack.size = function(){
+    return size;
   };
 
   return stack;

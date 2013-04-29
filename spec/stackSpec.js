@@ -26,15 +26,21 @@ describe("stack", function() {
       stack.add(4);
       stack.add(5);
       stack.add(6);
-      expect(stack.toEqual({
+      expect(stack).toEqual({
         0:4,
         1:5,
         2:6
-        })
-      );
+        });
     });
   });
 
+  describe('size()', function() {
+    it('should return size', function() {
+      stack.add(3);
+      stack.add(2);
+      expect(stack.size()).toEqual(2);
+    });
+  });
 
   // Hey! Add more tests here to test the functionality of stack
 });
