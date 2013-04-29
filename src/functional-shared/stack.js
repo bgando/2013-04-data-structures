@@ -10,17 +10,20 @@ var makeStack = function(){
 
 var stackMethods = {};
 stackMethods.add = function(value){
-    this.storage[this.length] = value;
-    this.length+=1;
+  this.storage[this.length] = value;
+  this.length+=1;
 
-  };
+};
 stackMethods.remove = function(){
-    var obj = this.storage[this.length-1];
-    delete this.storage[this.length-1];
-    this.length-=1;
-    return obj;
-  };
+  if (this.length===0) {
+    throw new Error('cannot remove from empty stack');
+  }
+  var obj = this.storage[this.length-1];
+  delete this.storage[this.length-1];
+  this.length-=1;
+  return obj;
+};
 
 stackMethods.size = function() {
-    return this.length;
+  return this.length;
 };
