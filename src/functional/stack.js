@@ -8,12 +8,16 @@ var makeStack = function(){
   var stack = {};
 
   stack.add = function(value){
-    stack[size] = value;
+    storage[size] = value;
     size+=1;
 
   };
 
   stack.remove = function(){
+    size-=1;
+    var obj = storage[size];
+    delete storage[size];
+    return obj;
   };
 
   stack.size = function(){
