@@ -2,20 +2,18 @@
 var Stack = function(){
   // Use an object with numeric keys to store values
   // Implement the methods below
-  var stack = Object.create(stackMethods);
+  var stack = Object.create(Stack.prototype);
   stack.length = 0;
   stack.storage = {};
-  // _.extend(stack, stackMethods);
   return stack;
 };
 
-var stackMethods = {};
-stackMethods.add = function(value){
+Stack.prototype.add = function(value){
   this.storage[this.length] = value;
   this.length+=1;
 
 };
-stackMethods.remove = function(){
+Stack.prototype.remove = function(){
   if (this.length===0) {
     throw new Error('cannot remove from empty stack');
   }
@@ -25,6 +23,6 @@ stackMethods.remove = function(){
   return obj;
 };
 
-stackMethods.size = function() {
+Stack.prototype.size = function() {
   return this.length;
 };

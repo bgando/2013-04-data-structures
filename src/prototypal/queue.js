@@ -2,22 +2,19 @@
 var Queue = function(){
   // Use an object with numeric keys to store values
   // Implement the methods below
-  var queue = Object.create(queueMethods);
+  var queue = Object.create(Queue.prototype);
   queue.storage = {};
   queue.storage.size = 0; // Hint: set an initial value here
   queue.front = 0;
   return queue;
 };
 
-
-var queueMethods = {};
-
-queueMethods.add = function(value){
+Queue.prototype.add = function(value){
   this.storage[this.size()+this.front] = value;
   this.storage.size+=1;
 };
 
-queueMethods.remove = function(){
+Queue.prototype.remove = function(){
   if (this.size()===0) {
     throw new Error('Can\'t remove from empty queue');
   }
@@ -28,6 +25,6 @@ queueMethods.remove = function(){
   return obj;
 };
 
-queueMethods.size = function(){
+Queue.prototype.size = function(){
   return this.storage.size;
 };
