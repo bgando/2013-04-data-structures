@@ -1,4 +1,4 @@
-//17463
+//profiled:16692ms
 var Stack = function(){
   // Use an object with numeric keys to store values
   // Implement the methods below

@@ -1,4 +1,4 @@
-//profiled:4051ms
+//profiled:3961ms
 var Queue = function(){
   // Use an object with numeric keys to store values
   // Implement the methods below
